@@ -1,0 +1,437 @@
+*
+{
+    margin: 0;
+    padding: 0;
+
+    font-family: Poppins, sans-serif;
+    font-size: 2.4vw;
+}
+
+:root {
+    --description-color : rgb(129, 129, 129);
+}
+
+/* Menu icon mobile */
+.menu
+{
+    display: block;
+    position: fixed;
+    cursor: pointer;
+    margin: 10px;
+    z-index: 1;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: var(--description-color);
+    margin: 6px 0;
+    transition: 0.4s;
+
+    border-radius: 1rem;
+}
+
+.change .bar1 
+{
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2
+{
+    opacity: 0;
+}
+
+.change .bar3
+{
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+/* Nav */
+header .topnav
+{
+    position: fixed;
+    margin-top: 3rem;
+    display:none;
+
+    background: black;
+
+}
+
+
+header .topnav a
+{
+    float: left;
+    color: #f2f2f2;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    cursor: pointer;
+
+
+}
+
+.Underscore::before
+{
+    content:'';   
+    display:flex;
+    position: relative;
+    height: 3px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.Underscore::after
+{
+    content: '';
+    display:flex;
+    position: relative;
+    height: 3px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background: linear-gradient(45deg, #8a8989, #bab9bb);
+    transform: scaleX(0);
+    transition: all .3s ease-in-out;
+    transform-origin: left;
+}
+header .active:hover ~ .Underscore::after
+{
+    transform: scaleX(1);
+}
+
+/* shop cart */
+.shopping_cart
+{
+    display:inline-block;
+    position: absolute;
+    width: 4vw;
+    top: 1%;
+    left: 90%;
+    cursor: pointer;
+
+
+    fill: var(--description-color);
+}
+
+#my_cart
+{
+    display:inline-block;
+    position: absolute;
+    width:19vw;
+    top: 8%;
+    left: 80%;
+    background:white;
+
+    text-align: center;
+    display: none;
+}
+
+#my_cart li
+{
+    display:flex;
+    cursor: pointer;
+
+
+    width: 100%;
+
+
+    align-items: center;
+    justify-content: center;
+}
+
+/* wish list */
+.wishlist
+{
+    display:inline-block;
+    position: absolute;
+    width: 4vw;
+    top: 1%;
+    left: 95%;
+    cursor: pointer;
+
+    fill: var(--description-color);
+}
+
+/* Slides back header */
+header .offer img
+{
+    width: 100%;
+}
+
+header .offer h2
+{
+    color:rgb(236, 236, 236);
+    font-size: 7vw;
+    position:absolute;
+    top: 30vw;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+  
+header .offer a
+{
+    text-decoration: none;
+    color: rgb(143, 142, 142);
+    position:absolute;
+
+    border:solid aqua;
+    border-radius: 3rem;
+    background-color: black;
+
+    padding: 0.5rem;
+    
+    top: 40vw;
+    left: 50%;
+    transform: translate(-50%, -50%);    
+}
+
+/* Deals */
+
+.container_deals
+{
+    display:block;
+    
+    align-items: center;
+    text-align: center;
+}
+
+.container_deals h3
+{
+    color: #3d3d3d;
+    font-size: 6vw;
+    margin-top: 2rem;
+    text-align: center;
+
+}
+
+.container_deals .product
+{
+    display:inline-block;
+    margin: 3rem;
+
+}
+.container_deals .product .container
+{
+    position: relative;   
+
+}
+
+.container_deals .product .container .image
+{
+    display:block;
+    width: 40vh;
+}
+
+.container_deals .product .container .overlay
+{
+    position: absolute;
+    cursor: pointer;
+
+    text-decoration: none;
+    transition: .5s ease;
+
+    border-radius: 3rem;
+    opacity: 0.5;
+
+    background-color: black;
+    color: rgb(143, 142, 142);
+
+    padding: 0.5rem 0;
+    bottom: 2vw;
+    left: 0;
+    right: 0;
+    margin: auto;   
+
+   
+}
+.container_deals .product .container:hover .overlay
+{
+    opacity: 1;
+}
+
+.container_deals .icon svg
+{
+    fill: rgb(189, 186, 186);
+    display: inline-block;
+    cursor: pointer;
+    width:1.6rem;
+}
+
+.active
+{
+    fill: black;
+}
+
+.container_deals a
+{
+    text-decoration: none;
+    color: rgb(129, 129, 129);
+}
+
+.about 
+{
+    background-color: #3d3d3d;
+    width: 100%;
+    height: 30vw;
+    text-align: center;
+    padding-top: 2vw;
+}
+
+/*  Social media icons */
+li
+{
+    display:inline-block;
+    width:3vw;
+    margin: 2px;
+    
+}
+
+li a:hover 
+{
+    fill: var(--description-color);
+}
+
+.top-button svg
+{
+    display: none;
+}
+
+
+@media screen and (min-width:700px){
+
+    
+    *{font-size: 1.6vw;}
+
+    .menu
+    {
+        visibility:hidden;
+    }
+    header .topnav
+    {
+        position: absolute;
+
+        display:block;
+
+        margin-top: 0;
+
+        background:none;
+    }
+    
+    /* shop cart */
+    .shopping_cart
+    {
+        width:3vw;
+    }
+    
+    
+
+    /* wish list */
+    .wishlist
+    {
+        width: 3vw;
+    }
+    /* Slides header */
+    header .offer img
+    {
+        margin-top: -15%;
+        width: 100%;
+    }
+    
+    header .offer h2
+    {
+        color:rgb(236, 236, 236);
+        font-size: 6vw;
+        position:absolute;
+        top: 23vw;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    
+    }
+      
+    header .offer a
+    {
+        text-decoration: none;
+        color: rgb(143, 142, 142);
+        position:absolute;
+    
+        border:solid aqua;
+        border-radius: 3rem;
+        background-color: black;
+    
+        padding: 0.5rem;
+        
+        top: 30vw;
+        left: 50%;
+        transform: translate(-50%, -50%);    
+    }
+    
+    /* Deals */
+    
+    .container_deals h3
+    {
+        color: #3d3d3d;
+        font-size: 4rem;
+        text-align: center;
+        margin: 0rem 0 -2rem 0;
+    
+    }
+    
+    .container_deals .product
+    {
+        display:inline-block;
+    
+    }    
+    
+    .container_deals .product .image
+    {
+        display:block;
+        width: 40vh;
+    
+        align-items: center;
+    }
+    
+    .container_deals .product .overlay
+    {
+        display:block;
+
+        align-items: center;
+        justify-content: center;
+
+    }
+    
+        
+    .container_deals .icon img
+    {
+        display:inline-block;
+        width:1.6rem;
+    }
+
+    /* button to go back to the top */
+    .top-button
+    {
+        display:none;
+        border-radius: 50%;
+        background:black;
+        position: fixed;
+
+        inset: 88%  93% ;
+
+        width: 1.9rem;
+        height: 1.9rem;
+
+        fill: white;
+        padding:.5rem ;
+
+        cursor: pointer;
+    }
+    .top-button svg
+    {
+        display:block;
+    }
+   
+} 
