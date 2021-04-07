@@ -63,14 +63,11 @@
 
             <div id="my_cart">
                 <h3>Your cart</h3>
-                <ul id="list">
-
-                </ul>
+                <ul id="list"></ul>
             </div>
-
         </div>
 
-        <div>
+        <div id="my_wish">
             <div class="wishlist">
                 <svg onclick="Modal.wishModal()" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 412.735 412.735"
@@ -88,9 +85,86 @@
 
                 </svg>
             </div>
+            <div id="my_fav">
+                <h2>Wish List</h2>
+                <ul id="list_fav"></ul>
+            </div>
 
 
         </div>
+
+        <div class="user_interface">
+            <div id="user">
+                <svg onclick="Modal.User()" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
+                    style="enable-background:new 0 0 512 512;" xml:space="preserve">
+
+                    <g>
+                        <path d="M437.02,330.98c-27.883-27.882-61.071-48.523-97.281-61.018C378.521,243.251,404,198.548,404,148
+                C404,66.393,337.607,0,256,0S108,66.393,108,148c0,50.548,25.479,95.251,64.262,121.962
+                c-36.21,12.495-69.398,33.136-97.281,61.018C26.629,379.333,0,443.62,0,512h40c0-119.103,96.897-216,216-216s216,96.897,216,216
+                h40C512,443.62,485.371,379.333,437.02,330.98z M256,256c-59.551,0-108-48.448-108-108S196.449,40,256,40
+                c59.551,0,108,48.448,108,108S315.551,256,256,256z" />
+                    </g>
+
+                </svg>
+            </div>
+            <div class="loging">
+                <a href="">loging</a>
+                <div class="line"></div>
+                or
+                <div class="line"></div>
+                <a href="">Sing in</a>
+                
+
+            </div>
+            <div class="Sing_in">
+                <div class="close_form" onclick="Modal.UserClose()">
+                    <div class="row01"></div>
+                    <div class="row02"></div>
+                </div>
+                <form name="myForm" action="">
+                    <fieldset>
+                        <h1>sign up </h1>
+                        <div id="icon">
+                            <a href="#Google"><img src="./assets/google.svg" alt="google" ></a>
+                            <a href="#Facebook"><img src="./assets/facebook1.svg" alt="facebook" ></a>
+                        </div>
+        
+                        <hr>
+        
+                        <div id="Name">
+                            <label for="fname">Full Name </label> <br>
+                            <input type="text" id="fname" name="fullname" placeholder="your full name" required>
+                            
+                        </div>
+                        
+                        <div class="email">
+                            <label for="email">Email</label> <br>
+                            <input type="text" id="Email" name="email" required placeholder="something@gmail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                        </div>
+            
+                        <div id="Date">
+                            <label for="date">Date</label><br>
+                            <input type="date" name="date" id="date" required>
+                        </div>
+            
+                        <div id="number">
+                            <label for="phone">Contact number</label><br required>
+                            <input type="tel" name="phone" id="phone" placeholder="(11)9923787678">
+                        </div>
+                        <br>
+                        <div id="Notification">
+                            <input type="checkbox" name="notification" id="notification">
+                            <label for="notification">Allow notifications</label><br> <br>
+                        </div>
+        
+                        <button onclick="SubmitForm.submit()" type="submit">Submit</button>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+
 
         <div id="Home" class="back_header">
             <div class="offer ">
@@ -251,6 +325,8 @@
 
             </svg>
         </a>
+
+        
 
     </main>
     <footer id="About">

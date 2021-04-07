@@ -110,7 +110,7 @@ header .active:hover ~ .Underscore::after
     position: absolute;
     width: 4vw;
     top: 1%;
-    left: 90%;
+    left: 85%;
     cursor: pointer;
 
 
@@ -135,9 +135,7 @@ header .active:hover ~ .Underscore::after
     display:flex;
     cursor: pointer;
 
-
     width: 100%;
-
 
     align-items: center;
     justify-content: center;
@@ -150,11 +148,204 @@ header .active:hover ~ .Underscore::after
     position: absolute;
     width: 4vw;
     top: 1%;
-    left: 95%;
+    left: 90%;
     cursor: pointer;
 
     fill: var(--description-color);
 }
+
+#my_fav
+{
+    display:inline-block;
+    position: absolute;
+    width:19vw;
+    top: 8%;
+    left: 80%;
+    background:white;
+
+    text-align: center;
+    display: none;
+}
+
+#my_fav li
+{
+    display:flex;
+    cursor: pointer;
+
+    width: 100%;
+
+    align-items: center;
+    justify-content: center;
+}
+
+/* user */
+
+#user
+{
+    display:inline-block;
+    position: absolute;
+    width: 3vw;
+    top: 1%;
+    left: 95%;
+    cursor: pointer;
+
+
+    fill: var(--description-color);
+}
+
+.loging
+{
+    display:inline-block;
+    position: absolute;
+    width:19vw;
+    top: 8%;
+    left: 80%;
+    background:white;
+
+    text-align: center;
+    display: none;
+}
+
+.line
+{
+    display: block;
+    background-color: var(--description-color);
+    width:3vw;
+    height:0.5vw;
+
+}
+
+
+/* form */
+.close_form
+{
+    display: inline-block;
+    cursor: pointer;
+    margin: 50px 50px;
+    z-index: 1;
+}
+.row01, .row02
+{
+    width: 35px;
+    height: 5px;
+    background-color: var(--description-color);
+    margin: 6px 0;
+    transition: 0.4s;
+
+    border-radius: 1rem;
+}
+
+.row01
+{
+    -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+    transform: rotate(-45deg) translate(-1px, 6px);
+}
+
+.row02
+{
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-1px, -8px);
+}
+.Sing_in
+{
+    display:inline-block;
+    position: fixed;
+    width: 100%;
+    height:100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+
+    visibility:hidden;
+}
+.Sing_in.opened
+{
+    visibility:visible;
+}
+
+
+form
+{
+    background: black;
+    float: left;
+
+    text-align: left;
+
+    margin-top: 2em;
+    margin-left: 300px;
+
+    border-radius: 0.7em ;
+    
+}
+
+fieldset
+{
+    background-color: black;
+    border-radius: 0.7em;
+    border:none;
+
+    box-shadow: 5px 10px #313131;
+    
+}
+
+form h1
+{
+    background-color: black;
+    color:var(--text-font);
+    text-align: center;
+}
+
+form #icon img
+{
+    width: 25%;
+    background-color: black;
+}
+
+form #icon a
+{
+    display: inline-block;
+    text-align: center;
+    background: black;
+}
+
+form #icon a:first-child
+{
+    margin-left: .3rem;
+    margin-right:-3rem;
+}
+
+form div , form div label , form div input
+{
+    background-color: black;
+    color: var(--text-font);
+
+    padding-left: 0.5em;
+}
+
+form input 
+{
+    border-radius: 0.7em ;
+    padding: .5em;
+    border-color: var(--text-font);
+}
+
+form input ::placeholder
+{
+    color: var(--text-font);
+}
+
+
+button
+{
+    text-align:center;
+
+    color: var(--text-font);
+    border-radius: .7em;
+
+    padding: .5em .8em;
+    margin-bottom: 0.5em; 
+    margin-left: 40%;
+}
+
 
 /* Slides back header */
 header .offer img
@@ -326,15 +517,22 @@ li a:hover
     .shopping_cart
     {
         width:3vw;
-    }
-    
-    
+    }       
 
     /* wish list */
     .wishlist
     {
         width: 3vw;
     }
+
+    /* User */
+    #User
+    {
+        width: 3vw;
+    }
+
+    
+
     /* Slides header */
     header .offer img
     {

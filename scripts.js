@@ -28,10 +28,57 @@ const Modal = {
     },
 
     wishModal() {
+        let open = document.getElementById("my_fav");
 
+        if (open.style.display != "block") {
+            open.style.display = "block";
+        } else {
+            open.style.display = "none";
+        }
+    },
+
+    User(){
+       document.querySelector('.Sing_in').classList.add('opened')
+    },
+
+    UserClose(){
+        document.querySelector('.Sing_in').classList.remove('opened')
     }
 }
 
+//Form
+
+let Fname ; 
+let Email ; 
+let Birth;
+let Phone;
+let Check ; 
+
+let SubmitForm = {
+    submit(){
+
+        Fname = document.getElementById("fname").value;
+
+        Email = document.getElementById("Email").value;
+
+        Birth = document.getElementById("date").value;
+
+        Phone = document.getElementById("phone").value;
+
+        Check = document.getElementById("notification").checked ;       
+
+        console.log(Fname,"/" , Email, "/" , Birth, "/", Phone, "/" , Check );
+
+        if (Fname && Email && Birth && Phone !== "") 
+        {
+            alert("Thanks!!");              
+                        
+        }    
+
+
+
+    }
+}
 
 //Slides show
 let slideIndex = 0;
@@ -59,9 +106,9 @@ const Wish = {
 
         let white = document.getElementById(clicked_id);
         let product = document.getElementsByClassName(clicked_id);
-        description = product.item(0).innerText ;      
-        
-       
+        description = product.item(0).innerText;
+
+
         if (white.style.fill != "black") {
             white.style.fill = "black";
             Wish.addFavorite();
@@ -73,12 +120,12 @@ const Wish = {
         }
         console.log(description)
         console.log(white)
-        
+
     },
 
     addFavorite() {
         let x = description
-        let ul = document.getElementById("list");
+        let ul = document.getElementById("list_fav");
         let li = document.createElement('li');
         li.setAttribute('id', x);
         li.setAttribute('onclick', 'Wish.removeItem(this.id)')
