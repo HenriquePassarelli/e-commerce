@@ -38,10 +38,19 @@ const Modal = {
     },
 
     User(){
-       document.querySelector('.Sing_in').classList.add('opened')
+        let open = document.getElementById('loging');
+        if (open.style.display != "block") {
+            open.style.display = "block";
+        } else {
+            open.style.display = "none";
+        }
     },
 
-    UserClose(){
+    Sing_in(){
+        document.querySelector('.Sing_in').classList.add('opened');
+    },
+
+    Sing_inClose(){
         document.querySelector('.Sing_in').classList.remove('opened')
     }
 }
@@ -74,8 +83,6 @@ let SubmitForm = {
             alert("Thanks!!");              
                         
         }    
-
-
 
     }
 }
@@ -142,11 +149,6 @@ const Wish = {
     }
 }
 
-
-
-
-
-
 //show top button
 
 let top_button = document.getElementById('top-button')
@@ -162,9 +164,6 @@ window.onresize = function () {
 
     console.log(x)
 }
-
-
-
 
 let onScroll = function () {
     var y = window.scrollY;
@@ -183,4 +182,34 @@ window.addEventListener("scroll", onScroll);
 function topHome() {
     top_button.scrollTo = 0
     document.documentElement.scrollTop = 0;
+}
+
+//==== product ===== 
+// next and preview
+
+const ImgProduct = {
+
+    index: 1,
+    
+
+    plusSlides(n){
+        showSlides(index += n)
+    },
+
+    current(n){
+        showSlides(index = n)
+    },
+
+    showSlides(n){
+        let slides = document.getElementsByClassName("images_slide");
+        let dots = document.getElementsByClassName("demo")
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";                        
+        }
+
+        if(index > slides.length){index = 1}
+        slides[index - 1].style.display = "block"
+        
+        console.log(v)
+    }
 }

@@ -193,7 +193,7 @@ header .active:hover ~ .Underscore::after
     fill: var(--description-color);
 }
 
-.loging
+#loging
 {
     display:inline-block;
     position: absolute;
@@ -206,22 +206,21 @@ header .active:hover ~ .Underscore::after
     display: none;
 }
 
-.line
+#loging a
 {
-    display: block;
-    background-color: var(--description-color);
-    width:3vw;
-    height:0.5vw;
-
+    cursor: pointer;
 }
 
+#loging span
+{
+    cursor:default;
+}
 
 /* form */
 .close_form
 {
     display: inline-block;
     cursor: pointer;
-    margin: 50px 50px;
     z-index: 1;
 }
 .row01, .row02
@@ -262,7 +261,6 @@ header .active:hover ~ .Underscore::after
     visibility:visible;
 }
 
-
 form
 {
     background: black;
@@ -270,8 +268,8 @@ form
 
     text-align: left;
 
-    margin-top: 2em;
-    margin-left: 300px;
+    margin-top: 2rem;
+    margin-left: 20rem;
 
     border-radius: 0.7em ;
     
@@ -290,13 +288,13 @@ fieldset
 form h1
 {
     background-color: black;
-    color:var(--text-font);
+    color:var(--description-color);
     text-align: center;
 }
 
 form #icon img
 {
-    width: 25%;
+    width: 20%;
     background-color: black;
 }
 
@@ -316,29 +314,59 @@ form #icon a:first-child
 form div , form div label , form div input
 {
     background-color: black;
-    color: var(--text-font);
+    color: var(--description-color);
 
     padding-left: 0.5em;
 }
 
 form input 
 {
-    border-radius: 0.7em ;
     padding: .5em;
-    border-color: var(--text-font);
+
+    border: none;
+}
+form input:focus
+{
+    outline: none;
+}
+.UnderscoreForm::before
+{
+    content:'';   
+    display:flex;
+    position: relative;
+    height: 3px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.UnderscoreForm::after
+{
+    content: '';
+    display:flex;
+    position: relative;
+    height: 3px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background: linear-gradient(45deg, #8a8989, #bab9bb);
+    transform: scaleX(0);
+    transition: all .3s ease-in-out;
+    transform-origin: left;
 }
 
 form input ::placeholder
 {
-    color: var(--text-font);
+    color: #d83232;
+    
 }
-
 
 button
 {
     text-align:center;
 
-    color: var(--text-font);
+    color: var(--description-color);
     border-radius: .7em;
 
     padding: .5em .8em;

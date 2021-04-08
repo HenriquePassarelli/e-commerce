@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./stylesheet.css">
+    <link rel="stylesheet" href="./styles/stylesheet.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;500&display=swap" rel="stylesheet">
 
     <title>e-commerce</title>
@@ -59,8 +59,6 @@
 
                 </svg>
             </div>
-
-
             <div id="my_cart">
                 <h3>Your cart</h3>
                 <ul id="list"></ul>
@@ -109,17 +107,19 @@
 
                 </svg>
             </div>
-            <div class="loging">
-                <a href="">loging</a>
-                <div class="line"></div>
-                or
-                <div class="line"></div>
-                <a href="">Sing in</a>
-                
+            <div id="loging">
+                <div>
+                    <a>loging</a>
+                </div>
+                <span>or</span>
+                <div>
+                    <a onclick="Modal.Sing_in()">Sing in</a>
+                </div>
+
 
             </div>
             <div class="Sing_in">
-                <div class="close_form" onclick="Modal.UserClose()">
+                <div class="close_form" onclick="Modal.Sing_inClose()">
                     <div class="row01"></div>
                     <div class="row02"></div>
                 </div>
@@ -127,28 +127,29 @@
                     <fieldset>
                         <h1>sign up </h1>
                         <div id="icon">
-                            <a href="#Google"><img src="./assets/google.svg" alt="google" ></a>
-                            <a href="#Facebook"><img src="./assets/facebook1.svg" alt="facebook" ></a>
+                            <a href="#Google"><img src="./assets/google.svg" alt="google"></a>
+                            <a href="#Facebook"><img src="./assets/facebook1.svg" alt="facebook"></a>
                         </div>
-        
+
                         <hr>
-        
+
                         <div id="Name">
                             <label for="fname">Full Name </label> <br>
                             <input type="text" id="fname" name="fullname" placeholder="your full name" required>
-                            
+                            <div class="UnderscoreForm"></div>
                         </div>
-                        
+
                         <div class="email">
                             <label for="email">Email</label> <br>
-                            <input type="text" id="Email" name="email" required placeholder="something@gmail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                            <input type="text" id="Email" name="email" required placeholder="something@gmail.com"
+                                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
                         </div>
-            
+
                         <div id="Date">
                             <label for="date">Date</label><br>
                             <input type="date" name="date" id="date" required>
                         </div>
-            
+
                         <div id="number">
                             <label for="phone">Contact number</label><br required>
                             <input type="tel" name="phone" id="phone" placeholder="(11)9923787678">
@@ -158,7 +159,7 @@
                             <input type="checkbox" name="notification" id="notification">
                             <label for="notification">Allow notifications</label><br> <br>
                         </div>
-        
+
                         <button onclick="SubmitForm.submit()" type="submit">Submit</button>
                     </fieldset>
                 </form>
@@ -170,7 +171,7 @@
             <div class="offer ">
                 <img src="./assets/img01.jpg" alt="">
                 <h2>macbook 16</h2>
-                <a href="">Shop now</a>
+                <a href="products/Macbook_pro16.html">Shop now</a>
             </div>
             <div class="offer ">
                 <img src="./assets/img02.jpg" alt="">
@@ -196,8 +197,7 @@
                 <div class="product">
                     <div class="container">
                         <img src="./assets/img08.jpg" alt="" class="image">
-                        <div class="overlay"><a>View</a></div>
-
+                        <div class="overlay"><a href="products/Macbook_pro16.html">View</a></div>
 
                     </div>
                     <div class="description product00">
@@ -326,7 +326,7 @@
             </svg>
         </a>
 
-        
+
 
     </main>
     <footer id="About">

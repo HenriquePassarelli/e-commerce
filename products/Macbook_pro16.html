@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Macbook pro 16</title>
+
+    <link rel="stylesheet" href="../styles/products_styles.css">
+</head>
+
+<body style="background:rgb(61, 61, 61)">
+    <header>
+        <nav id="topnav" class="topnav">
+            <a class="active" href="../index.html">Home</a>
+            <div class="Underscore"></div>
+        </nav>
+        <div id="shopping_cart">
+
+            <div class="shopping_cart">
+                <svg onclick="Modal.shopModal()" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 450.391 450.391"
+                    style="enable-background:new 0 0 450.391 450.391;" xml:space="preserve">
+
+                    <g>
+                        <path d="M143.673,350.322c-25.969,0-47.02,21.052-47.02,47.02c0,25.969,21.052,47.02,47.02,47.02
+				c25.969,0,47.02-21.052,47.02-47.02C190.694,371.374,169.642,350.322,143.673,350.322z M143.673,423.465
+				c-14.427,0-26.122-11.695-26.122-26.122c0-14.427,11.695-26.122,26.122-26.122c14.427,0,26.122,11.695,26.122,26.122
+				C169.796,411.77,158.1,423.465,143.673,423.465z" />
+                        <path
+                            d="M342.204,350.322c-25.969,0-47.02,21.052-47.02,47.02c0,25.969,21.052,47.02,47.02,47.02s47.02-21.052,47.02-47.02
+				C389.224,371.374,368.173,350.322,342.204,350.322z M342.204,423.465c-14.427,0-26.122-11.695-26.122-26.122
+				c0-14.427,11.695-26.122,26.122-26.122s26.122,11.695,26.122,26.122C368.327,411.77,356.631,423.465,342.204,423.465z" />
+                        <path d="M448.261,76.037c-2.176-2.377-5.153-3.865-8.359-4.18L99.788,67.155L90.384,38.42
+				C83.759,19.211,65.771,6.243,45.453,6.028H10.449C4.678,6.028,0,10.706,0,16.477s4.678,10.449,10.449,10.449h35.004
+				c11.361,0.251,21.365,7.546,25.078,18.286l66.351,200.098l-5.224,12.016c-5.827,15.026-4.077,31.938,4.702,45.453
+				c8.695,13.274,23.323,21.466,39.184,21.943h203.233c5.771,0,10.449-4.678,10.449-10.449c0-5.771-4.678-10.449-10.449-10.449
+				H175.543c-8.957-0.224-17.202-4.936-21.943-12.539c-4.688-7.51-5.651-16.762-2.612-25.078l4.18-9.404l219.951-22.988
+				c24.16-2.661,44.034-20.233,49.633-43.886l25.078-105.012C450.96,81.893,450.36,78.492,448.261,76.037z M404.376,185.228
+				c-3.392,15.226-16.319,26.457-31.869,27.69l-217.339,22.465L106.58,88.053l320.261,4.702L404.376,185.228z" />
+                    </g>
+
+                </svg>
+            </div>
+            <div id="my_cart">
+                <h3>Your cart</h3>
+                <ul id="list"></ul>
+            </div>
+        </div>
+
+        <div id="my_wish">
+            <div class="wishlist">
+                <svg onclick="Modal.wishModal()" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 412.735 412.735"
+                    style="enable-background:new 0 0 412.735 412.735;" xml:space="preserve">
+
+                    <g>
+                        <path d="M295.706,35.522C295.706,35.522,295.706,35.522,295.706,35.522c-34.43-0.184-67.161,14.937-89.339,41.273
+			c-22.039-26.516-54.861-41.68-89.339-41.273C52.395,35.522,0,87.917,0,152.55C0,263.31,193.306,371.456,201.143,375.636
+			c3.162,2.113,7.286,2.113,10.449,0c7.837-4.18,201.143-110.759,201.143-223.086C412.735,87.917,360.339,35.522,295.706,35.522z
+			 M206.367,354.738C176.065,336.975,20.898,242.412,20.898,152.55c0-53.091,43.039-96.131,96.131-96.131
+			c32.512-0.427,62.938,15.972,80.457,43.363c3.557,4.905,10.418,5.998,15.323,2.44c0.937-0.68,1.761-1.503,2.44-2.44
+			c29.055-44.435,88.631-56.903,133.066-27.848c27.202,17.787,43.575,48.114,43.521,80.615
+			C391.837,243.456,236.669,337.497,206.367,354.738z" />
+                    </g>
+
+                </svg>
+            </div>
+            <div id="my_fav">
+                <h2>Wish List</h2>
+                <ul id="list_fav"></ul>
+            </div>
+
+
+        </div>
+
+        <div class="user_interface">
+            <div id="user">
+                <svg onclick="Modal.User()" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
+                    style="enable-background:new 0 0 512 512;" xml:space="preserve">
+
+                    <g>
+                        <path d="M437.02,330.98c-27.883-27.882-61.071-48.523-97.281-61.018C378.521,243.251,404,198.548,404,148
+                C404,66.393,337.607,0,256,0S108,66.393,108,148c0,50.548,25.479,95.251,64.262,121.962
+                c-36.21,12.495-69.398,33.136-97.281,61.018C26.629,379.333,0,443.62,0,512h40c0-119.103,96.897-216,216-216s216,96.897,216,216
+                h40C512,443.62,485.371,379.333,437.02,330.98z M256,256c-59.551,0-108-48.448-108-108S196.449,40,256,40
+                c59.551,0,108,48.448,108,108S315.551,256,256,256z" />
+                    </g>
+
+                </svg>
+            </div>
+            <div id="loging">
+                <div>
+                    <a>loging</a>
+                </div>
+                <span>or</span>
+                <div>
+                    <a onclick="Modal.Sing_in()">Sing in</a>
+                </div>
+    </header>
+    <main>
+        <aside class="details">
+            <div class="description">
+                <h1>Macbook pro 16</h1>
+                <span>$1,500.00</span>
+                <p>The best laptop ever</p>
+            </div>
+            <div class="config">
+            </div>
+            <button type="submit">Add to cart</button>
+
+            
+        </aside>
+       
+        <div class="container">
+            <a class="prev" onclick="ImgProduct.plusSlides(-1)">❮</a>
+
+            <div class="images_slide">
+                <img src="../assets/img01.jpg" alt="macbook image">
+            </div>
+            <div class="images_slide">
+                <img src="../assets/mbp16t.jpeg" alt="macbook image">
+            </div>
+            <div class="images_slide">
+                <img src="../assets/mbp16t1.jpeg" alt="macbook image">
+            </div>
+            <a class="next" onclick="ImgProduct.plusSlides(1)">❯</a>
+
+            <div class="row">
+                <div class="standby">
+                    <img class="demo" onclick="ImgProduct.current(1)" src="../assets/img01.jpg" alt="macbook image">
+                </div>
+                <div class="standby">
+                    <img class="demo" onclick="ImgProduct.current(2)" src="../assets/mbp16t.jpeg" alt="macbook image">
+                </div>
+                <div class="standby">
+                    <img class="demo" onclick="ImgProduct.current(3)" src="../assets/mbp16t1.jpeg" alt="macbook image">
+                </div>
+            </div>
+        </div>
+        
+    </main>
+    <script src="../scripts.js"></script>
+</body>
+
+</html>

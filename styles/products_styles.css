@@ -1,0 +1,377 @@
+
+:root {
+    --description-color : rgb(129, 129, 129);
+}
+*
+{
+    margin: 0;
+    padding: 0;
+
+    font-family: Poppins, sans-serif;
+    font-size: 2.4vw;
+    
+}
+
+/* Nav */
+header .topnav
+{
+    position: absolute;
+    display:block;
+}
+
+
+header .topnav a
+{
+    float: left;
+    color: #f2f2f2;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    cursor: pointer;
+
+
+}
+
+.Underscore::before
+{
+    content:'';   
+    display:flex;
+    position: relative;
+    height: 3px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.Underscore::after
+{
+    content: '';
+    display:flex;
+    position: relative;
+    height: 3px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background: linear-gradient(45deg, #8a8989, #bab9bb);
+    transform: scaleX(0);
+    transition: all .3s ease-in-out;
+    transform-origin: left;
+}
+header .active:hover ~ .Underscore::after
+{
+    transform: scaleX(1);
+}
+
+/* shop cart */
+.shopping_cart
+{
+    display:inline-block;
+    position: absolute;
+    width: 4vw;
+    top: 1%;
+    left: 85%;
+    cursor: pointer;
+
+
+    fill: var(--description-color);
+}
+
+#my_cart
+{
+    display:inline-block;
+    position: absolute;
+    width:19vw;
+    top: 8%;
+    left: 80%;
+    background:white;
+
+    text-align: center;
+    display: none;
+}
+
+#my_cart li
+{
+    display:flex;
+    cursor: pointer;
+
+    width: 100%;
+
+    align-items: center;
+    justify-content: center;
+}
+
+/* wish list */
+.wishlist
+{
+    display:inline-block;
+    position: absolute;
+    width: 4vw;
+    top: 1%;
+    left: 90%;
+    cursor: pointer;
+
+    fill: var(--description-color);
+}
+
+#my_fav
+{
+    display:inline-block;
+    position: absolute;
+    width:19vw;
+    top: 8%;
+    left: 80%;
+    background:white;
+
+    text-align: center;
+    display: none;
+}
+
+#my_fav li
+{
+    display:flex;
+    cursor: pointer;
+
+    width: 100%;
+
+    align-items: center;
+    justify-content: center;
+}
+
+/* user */
+
+#user
+{
+    display:inline-block;
+    position: absolute;
+    width: 3vw;
+    top: 1%;
+    left: 95%;
+    cursor: pointer;
+
+
+    fill: var(--description-color);
+}
+
+#loging
+{
+    display:inline-block;
+    position: absolute;
+    width:19vw;
+    top: 8%;
+    left: 80%;
+    background:white;
+
+    text-align: center;
+    display: none;
+}
+
+#loging a
+{
+    cursor: pointer;
+}
+
+#loging span
+{
+    cursor:default;
+}
+
+/* form */
+.close_form
+{
+    display: inline-block;
+    cursor: pointer;
+    z-index: 1;
+}
+.row01, .row02
+{
+    width: 35px;
+    height: 5px;
+    background-color: var(--description-color);
+    margin: 6px 0;
+    transition: 0.4s;
+
+    border-radius: 1rem;
+}
+
+.row01
+{
+    -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+    transform: rotate(-45deg) translate(-1px, 6px);
+}
+
+.row02
+{
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-1px, -8px);
+}
+.Sing_in
+{
+    display:inline-block;
+    position: fixed;
+    width: 100%;
+    height:100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+
+    visibility:hidden;
+}
+.Sing_in.opened
+{
+    visibility:visible;
+}
+
+form
+{
+    background: black;
+    float: left;
+
+    text-align: left;
+
+    margin-top: 2rem;
+    margin-left: 20rem;
+
+    border-radius: 0.7em ;
+    
+}
+
+fieldset
+{
+    background-color: black;
+    border-radius: 0.7em;
+    border:none;
+
+    box-shadow: 5px 10px #313131;
+    
+}
+
+form h1
+{
+    background-color: black;
+    color:var(--description-color);
+    text-align: center;
+}
+
+form #icon img
+{
+    width: 20%;
+    background-color: black;
+}
+
+form #icon a
+{
+    display: inline-block;
+    text-align: center;
+    background: black;
+}
+
+form #icon a:first-child
+{
+    margin-left: .3rem;
+    margin-right:-3rem;
+}
+
+form div , form div label , form div input
+{
+    background-color: black;
+    color: var(--description-color);
+
+    padding-left: 0.5em;
+}
+
+form input 
+{
+    padding: .5em;
+
+    border: none;
+}
+form input:focus
+{
+    outline: none;
+}
+
+.container
+{
+    position: relative;
+    width:40%;
+}
+.images_slide
+{
+    display:block;
+
+}
+.images_slide img
+{
+    width: 100%;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: relative;
+  width: 100%;
+  
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.standby {
+    float: left;
+    width: 33%;
+}
+.demo
+{
+    width:90%;
+}
+
+.details
+{
+    float: right;
+    margin:10rem 10rem 0 0;
+}
+button:focus
+{
+    outline:none;
+}
+button
+{
+    border-radius: 0.7em;
+
+    margin-top:1rem;
+    padding:0.3rem 0.5rem
+}
+@media screen and (min-width:700px){
+
+    
+    *{font-size: 1.6vw;}
+
+    .menu
+    {
+        visibility:hidden;
+    }
+    
+    /* shop cart */
+    .shopping_cart
+    {
+        width:3vw;
+    }       
+
+    /* wish list */
+    .wishlist
+    {
+        width: 3vw;
+    }
+
+    /* User */
+    #User
+    {
+        width: 3vw;
+    }
+}
