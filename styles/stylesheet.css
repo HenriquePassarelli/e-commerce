@@ -11,6 +11,10 @@
     --description-color : rgb(129, 129, 129);
 }
 
+svg:focus
+{
+    outline: none;
+}
 /* Menu icon mobile */
 .menu
 {

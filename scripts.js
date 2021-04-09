@@ -37,7 +37,7 @@ const Modal = {
         }
     },
 
-    User(){
+    User() {
         let open = document.getElementById('loging');
         if (open.style.display != "block") {
             open.style.display = "block";
@@ -46,25 +46,25 @@ const Modal = {
         }
     },
 
-    Sing_in(){
+    Sing_in() {
         document.querySelector('.Sing_in').classList.add('opened');
     },
 
-    Sing_inClose(){
+    Sing_inClose() {
         document.querySelector('.Sing_in').classList.remove('opened')
     }
 }
 
 //Form
 
-let Fname ; 
-let Email ; 
+let Fname;
+let Email;
 let Birth;
 let Phone;
-let Check ; 
+let Check;
 
 let SubmitForm = {
-    submit(){
+    submit() {
 
         Fname = document.getElementById("fname").value;
 
@@ -74,34 +74,37 @@ let SubmitForm = {
 
         Phone = document.getElementById("phone").value;
 
-        Check = document.getElementById("notification").checked ;       
+        Check = document.getElementById("notification").checked;
 
-        console.log(Fname,"/" , Email, "/" , Birth, "/", Phone, "/" , Check );
+        console.log(Fname, "/", Email, "/", Birth, "/", Phone, "/", Check);
 
-        if (Fname && Email && Birth && Phone !== "") 
-        {
-            alert("Thanks!!");              
-                        
-        }    
+        if (Fname && Email && Birth && Phone !== "") {
+            alert("Thanks!!");
+
+        }
 
     }
 }
 
 //Slides show
-let slideIndex = 0;
-showSlides();
-function showSlides() {
-    let content = document.getElementsByClassName("offer");
+const show = {
+    slideIndex : 0,    
 
-    for (let i = 0; i < content.length; i++) {
-        content[i].style.display = "none";
-
+    showSlides() {
+        let x  = show.slideIndex
+        let content = document.getElementsByClassName("offer");
+    
+        for (let i = 0; i < content.length; i++) {
+            content[i].style.display = "none";    
+        }
+        show.slideIndex++
+        if (show.slideIndex > content.length) { show.slideIndex = 1 }
+        content[show.slideIndex - 1].style.display = "block";
+        setTimeout(show.showSlides, 4000);
     }
-    slideIndex++
-    if (slideIndex > content.length) { slideIndex = 1 }
-    content[slideIndex - 1].style.display = "block";
-    setTimeout(showSlides, 4000);
+    
 }
+show.showSlides()
 
 //favorite
 
@@ -124,9 +127,7 @@ const Wish = {
         else {
             white.style.fill = "rgb(189, 186, 186)";
             Wish.removeItem(description);
-        }
-        console.log(description)
-        console.log(white)
+        }        
 
     },
 
@@ -137,8 +138,7 @@ const Wish = {
         li.setAttribute('id', x);
         li.setAttribute('onclick', 'Wish.removeItem(this.id)')
         li.appendChild(document.createTextNode(x));
-        ul.appendChild(li);
-        console.log(ul)
+        ul.appendChild(li); 
 
     },
 
@@ -161,8 +161,7 @@ window.onresize = function () {
     else {
         topnav.style.display = "none";
     }
-
-    console.log(x)
+    
 }
 
 let onScroll = function () {
@@ -184,32 +183,4 @@ function topHome() {
     document.documentElement.scrollTop = 0;
 }
 
-//==== product ===== 
-// next and preview
 
-const ImgProduct = {
-
-    index: 1,
-    
-
-    plusSlides(n){
-        showSlides(index += n)
-    },
-
-    current(n){
-        showSlides(index = n)
-    },
-
-    showSlides(n){
-        let slides = document.getElementsByClassName("images_slide");
-        let dots = document.getElementsByClassName("demo")
-        for (let i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";                        
-        }
-
-        if(index > slides.length){index = 1}
-        slides[index - 1].style.display = "block"
-        
-        console.log(v)
-    }
-}
