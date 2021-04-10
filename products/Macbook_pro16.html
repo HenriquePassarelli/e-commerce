@@ -102,31 +102,40 @@
     </header>
     <main>
         <aside class="details">
-            <div class="description">
-                <h1>Macbook pro 16</h1>
-                <span>$1,500.00</span>
+            <div class="description ">
+                <div class="product00">
+                    <h1>Macbook pro 16</h1>
+                    <span>$1,500.00</span>
+                </div>                
                 <p>The best laptop ever</p>
             </div>
             <div class="config">
+                <a class="plus"> + </a>
+                <span id="number">0</span>
+                <a class="minus"> - </a>
             </div>
-            <button type="submit">Add to cart</button>
+            <button id="product00" onclick="Cart.product(this.id)">Add to cart</button>
 
-            
+
         </aside>
-       
-        <div class="container">
-            <a class="prev" onclick="slide.plusSlides(-1)">❮</a>
 
-            <div class="images_slide">
-                <img src="../assets/img01.jpg" alt="macbook image">
+        <div class="container">
+
+            <div id="images">
+                <a class="prev" onclick="slide.plusSlides(-1)">❮</a>
+
+                <div class="images_slide">
+                    <img src="../assets/img01.jpg" alt="macbook image">
+                </div>
+                <div class="images_slide">
+                    <img src="../assets/mbp16t.jpeg" alt="macbook image">
+                </div>
+                <div class="images_slide">
+                    <img src="../assets/mbp16t1.jpeg" alt="macbook image">
+                </div>
+                <a class="next" onclick="slide.plusSlides(1)">❯</a>
             </div>
-            <div class="images_slide">
-                <img src="../assets/mbp16t.jpeg" alt="macbook image">
-            </div>
-            <div class="images_slide">
-                <img src="../assets/mbp16t1.jpeg" alt="macbook image">
-            </div>
-            <a class="next" onclick="slide.plusSlides(1)">❯</a>
+
 
             <div class="row">
                 <div class="standby">
@@ -140,7 +149,7 @@
                 </div>
             </div>
         </div>
-        
+
     </main>
     <script src="./scripts_products.js"></script>
 </body>

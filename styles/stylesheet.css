@@ -272,11 +272,9 @@ form
 
     text-align: left;
 
-    margin-top: 2rem;
-    margin-left: 20rem;
+    margin:2rem 0 0 25%;
 
     border-radius: 0.7em ;
-    
 }
 
 fieldset
@@ -286,6 +284,8 @@ fieldset
     border:none;
 
     box-shadow: 5px 10px #313131;
+
+    padding:0.5rem
     
 }
 
@@ -300,6 +300,7 @@ form #icon img
 {
     width: 20%;
     background-color: black;
+    justify-content: center;
 }
 
 form #icon a
@@ -326,8 +327,8 @@ form div , form div label , form div input
 form input 
 {
     padding: .5em;
+    border-radius:0.7rem;
 
-    border: none;
 }
 form input:focus
 {
