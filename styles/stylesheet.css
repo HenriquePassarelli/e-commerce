@@ -265,6 +265,27 @@ header .active:hover ~ .Underscore::after
     visibility:visible;
 }
 
+.split
+{
+    display:flex;
+    
+
+    align-items: center;
+    justify-content: center;
+}
+
+.split a
+{
+    background:black;
+
+    width: 40%;
+    height: 0.1rem;    
+}
+.split span
+{
+    margin:.3rem;
+}
+
 form
 {
     background: black;

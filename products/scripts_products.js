@@ -97,9 +97,6 @@ const Cart = {
             Cart.removeItem(myCart);
         }
 
-
-
-
     },
 
     addproduct() {
@@ -107,8 +104,7 @@ const Cart = {
         let ul = document.getElementById("list");
         let li = document.createElement('li');
         li.setAttribute('id', x);
-        li.setAttribute('onclick', 'Wish.removeItem(this.id)')
-        li.appendChild(document.createTextNode(x));
+        li.appendChild(document.createTextNode(Cart.amount()+' - '+x));
         ul.appendChild(li);
     },
 
@@ -116,5 +112,40 @@ const Cart = {
 
         let x = document.getElementById(clicked_id);
         x.remove();
+    },
+
+    amount(n){
+        let sum = 0;
+        let num = document.getElementById('number')
+        let x = parseInt(num.innerHTML) ;
+
+        if(n == 1){ 
+            sum = x+n;
+            if(sum < 10)
+            {
+                num.innerHTML = '0'+sum;
+            }
+            else
+            {
+                num.innerHTML = sum;
+            }
+            
+        }
+        else
+        if(n == -1 & x > 1)
+        {
+            sum = x - 1;
+            if(sum < 10)
+            {
+                num.innerHTML = '0'+sum;
+            }
+            else
+            {
+                num.innerHTML = sum;
+            }
+
+        }
+        return num.innerHTML;
     }
 }
+
