@@ -93,12 +93,78 @@
             </div>
             <div id="loging">
                 <div>
-                    <a>loging</a>
+                    <a>Loging</a>
+                    <div class="loging_enter">
+                        <label for="email">Email</label> <br>
+                        <input type="text" name="email" required placeholder="something@gmail.com"
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                        <label for="password"> Password </label>
+                        <input type="password" placeholder="*******">
+                        <button id="enter" type="submit">Enter</button>
+                    </div>
                 </div>
-                <span>or</span>
+                <div class="split">
+                    <a></a>
+                    <span>or</span>
+                    <a></a>
+                </div>
                 <div>
-                    <a onclick="Modal.Sing_in()">Sing in</a>
+                    <div id="icon">
+                        <a href="#Google"><img src="../assets/google.svg" alt="google"></a>
+                        <a href="#Facebook"><img src="../assets/facebook1.svg" alt="facebook"></a>
+                    </div>
+                    <a class="register" onclick="Modal.Sing_in()" onfocusout="Modal.User()">Sing in</a>
                 </div>
+
+
+            </div>
+            <div class="Sing_in">
+                <div class="close_form" onclick="Modal.Sing_inClose()">
+                    <div class="row01"></div>
+                    <div class="row02"></div>
+                </div>
+                <form name="myForm" action="">
+                    <fieldset>
+                        <h1>Sign up </h1>
+                        <hr>
+                        <div id="Name">
+                            <label for="fname">Full Name </label> <br>
+                            <input type="text" id="fname" name="fullname" placeholder="your full name" required>
+                        </div>
+
+                        <div class="email">
+                            <label for="email">Email</label> <br>
+                            <input type="text" id="Email" name="email" required placeholder="something@gmail.com"
+                                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                        </div>
+
+                        <div id="Date">
+                            <label for="date">Date</label><br>
+                            <input type="date" name="date" id="date" required>
+                        </div>
+
+                        <div id="number">
+                            <label for="phone">Contact number</label><br>
+                            <input type="tel" name="phone" id="phone" placeholder="(11)9923787678" required>
+                        </div>
+                        <div class="password">
+                            <label for="password"> Password </label>
+                            <input type="password" name="password" id="password" placeholder="*******" minlength="8"
+                                required>
+                            <label> Confirm password </label>
+                            <input type="password" id="confirm_password" name="Confirm password"
+                                placeholder="confirm password" required>
+                        </div>
+                        <br>
+                        <div id="Notification">
+                            <input type="checkbox" name="notification" id="notification">
+                            <label for="notification">Allow notifications</label><br> <br>
+                        </div>
+
+                        <button onclick="SubmitForm.submit()" type="submit">Submit</button>
+                    </fieldset>
+                </form>
+            </div>
     </header>
     <main>
         <aside class="details">
@@ -113,7 +179,7 @@
             <div class="config">
                 <a class="plus" onclick="Cart.amount(1)"> + </a>
                 <span id="number">01</span>
-                <a class="minus" onclick="Cart.amount(-1)"> - </a> 
+                <a class="minus" onclick="Cart.amount(-1)"> - </a>
             </div>
             <button id="product00" onclick="Cart.product(this.id)">Add to cart</button>
 

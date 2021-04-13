@@ -201,18 +201,26 @@ header .active:hover ~ .Underscore::after
 {
     display:inline-block;
     position: absolute;
-    width:19vw;
+    width:21vw;
     top: 8%;
-    left: 80%;
+    left: 77%;
+    padding:0.2rem;
+    
     background:white;
 
     text-align: center;
     display: none;
+
+    border-radius:.3rem;
 }
 
-#loging a
+.register
 {
     cursor: pointer;
+    border: .04rem solid;
+    border-radius: 0.4rem;
+
+    padding:0.1rem;
 }
 
 #loging span
@@ -220,10 +228,79 @@ header .active:hover ~ .Underscore::after
     cursor:default;
 }
 
+
+
+/* or */
+.split
+{
+    display:flex;
+    
+    align-items: center;
+    justify-content: center;
+}
+
+.split a
+{
+    background:black;
+
+    width: 40%;
+    height: 0.1rem;    
+}
+.split span
+{
+    margin:.3rem;
+}
+
+/* loging */
+
+.loging_enter
+{
+    text-align: left;
+}
+.loging_enter input:focus
+{
+    outline: none;
+}
+.loging_enter input
+{
+    width:93%;
+
+    border-radius:.5rem;
+    border: .04rem solid;
+
+    padding:.3rem;
+    margin: 0 0.6rem 0 0;
+}
+.loging_enter button:focus
+{
+    outline: none;
+}
+.loging_enter button
+{
+    text-align:center;
+    cursor: pointer;
+
+    border-radius: .5em;
+    border: .04rem solid;
+
+    width:40%;
+    margin:0.3rem 0 0 30%;
+
+    background:none;
+}
+
+
+#icon a
+{
+    display: inline-block;
+    width:15%;
+    
+}
 /* form */
 .close_form
 {
     display: inline-block;
+    margin-top: 6%;
     cursor: pointer;
     z-index: 1;
 }
@@ -265,35 +342,13 @@ header .active:hover ~ .Underscore::after
     visibility:visible;
 }
 
-.split
-{
-    display:flex;
-    
-
-    align-items: center;
-    justify-content: center;
-}
-
-.split a
-{
-    background:black;
-
-    width: 40%;
-    height: 0.1rem;    
-}
-.split span
-{
-    margin:.3rem;
-}
-
 form
 {
     background: black;
     float: left;
-
+    margin:5% 0 0 20%;
+    
     text-align: left;
-
-    margin:2rem 0 0 25%;
 
     border-radius: 0.7em ;
 }
@@ -307,7 +362,6 @@ fieldset
     box-shadow: 5px 10px #313131;
 
     padding:0.5rem
-    
 }
 
 form h1
@@ -317,25 +371,7 @@ form h1
     text-align: center;
 }
 
-form #icon img
-{
-    width: 20%;
-    background-color: black;
-    justify-content: center;
-}
 
-form #icon a
-{
-    display: inline-block;
-    text-align: center;
-    background: black;
-}
-
-form #icon a:first-child
-{
-    margin-left: .3rem;
-    margin-right:-3rem;
-}
 
 form div , form div label , form div input
 {
@@ -348,51 +384,23 @@ form div , form div label , form div input
 form input 
 {
     padding: .5em;
-    border-radius:0.7rem;
+    border-radius:0.5rem;
+    border: .04rem solid;
 
 }
 form input:focus
 {
     outline: none;
 }
-.UnderscoreForm::before
+.password label
 {
-    content:'';   
     display:flex;
-    position: relative;
-    height: 3px;
-    width: 100%;
-    bottom: -5px;
-    left: 0;
-    background: rgba(0, 0, 0, 0.2);
 }
 
-.UnderscoreForm::after
-{
-    content: '';
-    display:flex;
-    position: relative;
-    height: 3px;
-    width: 100%;
-    bottom: -5px;
-    left: 0;
-    background: linear-gradient(45deg, #8a8989, #bab9bb);
-    transform: scaleX(0);
-    transition: all .3s ease-in-out;
-    transform-origin: left;
-}
-
-form input ::placeholder
-{
-    color: #d83232;
-    
-}
-
-button
+form button
 {
     text-align:center;
 
-    color: var(--description-color);
     border-radius: .7em;
 
     padding: .5em .8em;
@@ -550,7 +558,7 @@ li a:hover
 @media screen and (min-width:700px){
 
     
-    *{font-size: 1.6vw;}
+    *{font-size: 1.08rem;}
 
     .menu
     {
@@ -584,8 +592,6 @@ li a:hover
     {
         width: 3vw;
     }
-
-    
 
     /* Slides header */
     header .offer img
@@ -686,4 +692,15 @@ li a:hover
         display:block;
     }
    
+    /* form */
+    .close_form
+    {
+        margin: 1%;
+    }
+
+    form
+    {
+        margin: .5% 0 0 30%;
+
+    }
 } 

@@ -57,30 +57,47 @@ const Modal = {
 
 //Form
 
-let Fname;
-let Email;
-let Birth;
-let Phone;
-let Check;
+
 
 let SubmitForm = {
+
+    Fname:'',
+    Email:'',
+    Birth:'',
+    Phone:'',
+    Check:'',
+    Password:'',
+    confirm_password:'',
+
+    Enter() {
+
+    },
+
     submit() {
 
-        Fname = document.getElementById("fname").value;
+        SubmitForm.Fname = document.getElementById("fname").value;
 
-        Email = document.getElementById("Email").value;
+        SubmitForm.Email = document.getElementById("Email").value;
 
-        Birth = document.getElementById("date").value;
+        SubmitForm.Birth = document.getElementById("date").value;
 
-        Phone = document.getElementById("phone").value;
+        SubmitForm.Phone = document.getElementById("phone").value;
 
-        Check = document.getElementById("notification").checked;
+        SubmitForm.Check = document.getElementById("notification").checked;
 
-        console.log(Fname, "/", Email, "/", Birth, "/", Phone, "/", Check);
+        SubmitForm.Password = document.getElementById("password").value;
 
-        if (Fname && Email && Birth && Phone !== "") {
-            alert("Thanks!!");
+        SubmitForm.confirm_password = document.getElementById("confirm_password");
+        console.log(SubmitForm.Fname + SubmitForm.Email + SubmitForm.Birth + SubmitForm.Phone + SubmitForm.Password + SubmitForm.Check +SubmitForm.confirm_password.value)
 
+        if (SubmitForm.Password != SubmitForm.confirm_password.value) {
+            SubmitForm.confirm_password.setCustomValidity("Password don't match");
+        } else {
+            SubmitForm.confirm_password.setCustomValidity('');
+            if (SubmitForm.Fname && SubmitForm.Email && SubmitForm.Birth && SubmitForm.Phone && SubmitForm.Password !== "") {
+                alert("Thanks!!");
+
+            }
         }
 
     }
@@ -88,21 +105,21 @@ let SubmitForm = {
 
 //Slides show
 const show = {
-    slideIndex : 0,    
+    slideIndex: 0,
 
     showSlides() {
-        let x  = show.slideIndex
+        let x = show.slideIndex
         let content = document.getElementsByClassName("offer");
-    
+
         for (let i = 0; i < content.length; i++) {
-            content[i].style.display = "none";    
+            content[i].style.display = "none";
         }
         show.slideIndex++
         if (show.slideIndex > content.length) { show.slideIndex = 1 }
         content[show.slideIndex - 1].style.display = "block";
         setTimeout(show.showSlides, 4000);
     }
-    
+
 }
 show.showSlides()
 
@@ -127,7 +144,7 @@ const Wish = {
         else {
             white.style.fill = "rgb(189, 186, 186)";
             Wish.removeItem(description);
-        }        
+        }
 
     },
 
@@ -138,7 +155,7 @@ const Wish = {
         li.setAttribute('id', x);
         li.setAttribute('onclick', 'Wish.removeItem(this.id)')
         li.appendChild(document.createTextNode(x));
-        ul.appendChild(li); 
+        ul.appendChild(li);
 
     },
 
@@ -161,7 +178,7 @@ window.onresize = function () {
     else {
         topnav.style.display = "none";
     }
-    
+
 }
 
 let onScroll = function () {
