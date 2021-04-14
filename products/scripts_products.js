@@ -116,7 +116,7 @@ const Cart = {
 
     amount(n){
         let sum = 0;
-        let num = document.getElementById('number')
+        let num = document.getElementById('amount')
         let x = parseInt(num.innerHTML) ;
 
         if(n == 1){ 

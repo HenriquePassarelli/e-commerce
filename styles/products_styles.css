@@ -8,6 +8,7 @@
     padding: 0;
 
     font-family: Poppins, sans-serif;    
+    font-size: 2.4vw;
 }
 
 /* Nav */
@@ -18,7 +19,7 @@ header .topnav
 }
 
 
-header .topnav a
+header .topnav .active
 {
     float: left;
     color: #f2f2f2;
@@ -28,6 +29,10 @@ header .topnav a
     cursor: pointer;
 }
 
+.Underscore
+{
+    height: 0;
+}
 .Underscore::before
 {
     content:'';   
@@ -35,10 +40,8 @@ header .topnav a
     position: relative;
     height: 3px;
     width: 100%;
-    bottom: -5px;
     left: 0;
     background: rgba(0, 0, 0, 0.2);
-    z-index: 0;
 }
 
 .Underscore::after
@@ -48,7 +51,6 @@ header .topnav a
     position: relative;
     height: 3px;
     width: 100%;
-    bottom: -5px;
     left: 0;
     background: linear-gradient(45deg, #8a8989, #bab9bb);
     transform: scaleX(0);
@@ -241,7 +243,6 @@ header .active:hover ~ .Underscore::after
     background:none;
 }
 
-
 #icon a
 {
     display: inline-block;
@@ -249,11 +250,29 @@ header .active:hover ~ .Underscore::after
     
 }
 
+/* sing-in */
+.Sing_in
+{
+    display:block;
+    position: absolute;
+    width: 100%;
+    height:100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 10;
+
+    visibility:hidden;
+}
+.Sing_in.opened
+{
+    visibility:visible;
+}
+
 /* form */
 .close_form
 {
     display: inline-block;
-    margin-top: 6%;
+    margin-top: 1%;
+    margin-left: 90%;
     cursor: pointer;
     z-index: 1;
 }
@@ -279,21 +298,6 @@ header .active:hover ~ .Underscore::after
     -webkit-transform: rotate(45deg) translate(-8px, -8px);
     transform: rotate(45deg) translate(-1px, -8px);
 }
-.Sing_in
-{
-    display:inline-block;
-    position: fixed;
-    width: 100%;
-    height:100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    z-index: 1;
-
-    visibility:hidden;
-}
-.Sing_in.opened
-{
-    visibility:visible;
-}
 
 form
 {
@@ -304,6 +308,7 @@ form
     text-align: left;
 
     border-radius: 0.7em ;
+
 }
 
 fieldset
@@ -357,8 +362,8 @@ form button
     border-radius: .7em;
 
     padding: .5em .8em;
-    margin-bottom: 0.5em; 
-    margin-left: 40%;
+    margin: -3rem 0 0.5rem 40%;
+    
 }
 
 
@@ -367,7 +372,7 @@ form button
 .details
 {
     float: right;
-    margin:2rem 10rem 0 0;
+    margin:3rem 10rem 0 0;
 }
 
 .details p  
@@ -418,7 +423,7 @@ button
 {
     position: relative;
     width:40%;
-    margin: 3rem 0 0 4rem;
+    margin: 5rem 0 0 4rem;
 }
 
 #images
@@ -473,14 +478,9 @@ button
 
 @media screen and (min-width:700px){
 
-    
     *{font-size: 1.6vw;}
-
-    .menu
-    {
-        visibility:hidden;
-    }
     
+
 
     /* shop cart */
     .shopping_cart
@@ -503,7 +503,12 @@ button
     /* form */
     form
     {
-        margin: 0 0 0 30%;
+        margin: 2% 0 0 2%;
+        
+    }
 
+    .password label
+    {
+        display:inline-flex;
     }
 }
