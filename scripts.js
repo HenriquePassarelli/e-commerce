@@ -13,6 +13,11 @@ function Navfunction(x) {
 
 }
 
+const Storage = {
+    set(){
+    }
+}
+
 //shopping cart
 
 const Modal = {
@@ -134,6 +139,7 @@ const Wish = {
         let white = document.getElementById(clicked_id);
         let product = document.getElementsByClassName(clicked_id);
         description = product.item(0).innerText;
+
 
 
         if (white.style.fill != "black") {
