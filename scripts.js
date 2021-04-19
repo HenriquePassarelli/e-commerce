@@ -14,7 +14,6 @@ function Navfunction(x) {
 }
 
 
-
 //shopping cart
 
 const Modal = {
