@@ -13,10 +13,7 @@ function Navfunction(x) {
 
 }
 
-const Storage = {
-    set(){
-    }
-}
+
 
 //shopping cart
 
@@ -128,6 +125,26 @@ const show = {
 }
 show.showSlides()
 
+
+const Storage = {
+
+    fav(){
+
+        let list = document.getElementById('list_fav').querySelectorAll('li')
+        
+        list.forEach((item,index) => {
+
+            console.log({index,item})
+        });
+
+        let myObj = JSON.stringify(item)
+
+        console.log(myObj);
+    }
+    
+}
+
+
 //favorite
 
 const Wish = {
@@ -151,10 +168,12 @@ const Wish = {
             white.style.fill = "rgb(189, 186, 186)";
             Wish.removeItem(description);
         }
+        Storage.fav();
 
     },
 
     addFavorite() {
+
         let x = description
         let ul = document.getElementById("list_fav");
         let li = document.createElement('li');
@@ -162,6 +181,7 @@ const Wish = {
         li.setAttribute('onclick', 'Wish.removeItem(this.id)')
         li.appendChild(document.createTextNode(x));
         ul.appendChild(li);
+
 
     },
 
@@ -171,6 +191,7 @@ const Wish = {
         x.remove();
     }
 }
+
 
 //show top button
 
@@ -205,5 +226,4 @@ function topHome() {
     top_button.scrollTo = 0
     document.documentElement.scrollTop = 0;
 }
-
 
